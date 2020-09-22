@@ -30,7 +30,35 @@ import UIKit
  #
  اكثر من 40 -> سمنة مفرطه
 */
+func calculateBmi (mass : Double, height: Double) -> String
+{
+    let bmi = mass / (height * 2)
 
+if (bmi > 40)
+{
+    return ("YourBMI is \(bmi) therefore you are overweight")
+}
+else if (bmi >= 18.5 && bmi < 30)
+{
+    return ("Your bmi is \(bmi) therefore you are of normal weight")
+}
+else if (bmi >= 18.4)
+{
+    return ("Your BMI is \(bmi) therefore you are of underweight")
+}
+else if (bmi >= 30.1 && bmi < 40)
+{
+    return ("Your BMI is \(bmi) therefore you are very overweight")
+}
+else
+{
+    return ("Your BMI doesn't make sense.")
+}
+    
+}
+
+
+print(calculateBmi(mass: 75, height: 1.55448))
 
 
 
@@ -52,3 +80,16 @@ import UIKit
  و اذا كان فوق ١٨ سوف يتم طباعة نص بأن المتقدم يُسمح له بإمتلاك رخصة قيادة
 */
 
+func driversLiscense(name:String, age:Int) -> String{
+if (age < 18){
+    return("\(name) is too young to have a driver's lisense.")
+}
+else if (age >= 18){
+    return("\(name) is applicable for a driver's lisense.")
+    }
+else{
+    return("I didn't quite get the number you put in.")
+    }
+}
+
+print(driversLiscense(name: "Lina", age: 16))
